@@ -2,6 +2,8 @@
 
 ## Module ##
 
+- Mybatis
+
 - PostgreSQL
 
 - Swagger

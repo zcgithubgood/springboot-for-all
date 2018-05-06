@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.service.manager.mapper.user.EUserMapper">
+  <resultMap id="BaseResultMap" type="com.service.manager.mydo.user.EUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="passwd" jdbcType="VARCHAR" property="passwd" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+    <result column="mobile_phone" jdbcType="VARCHAR" property="mobilePhone" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="status_time" jdbcType="TIMESTAMP" property="statusTime" />
+    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_user" jdbcType="VARCHAR" property="updateUser" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="search_word" jdbcType="VARCHAR" property="searchWord" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+  </resultMap>
+</mapper>

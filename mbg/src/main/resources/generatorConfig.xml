@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="generator.properties"/>
+    <classPathEntry location="${jdbc.driverLocation}"/>
+
+    <context id="user" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="${mapper.mapper}"/>
+            <property name="caseSensitive" value="true"/>
+        </plugin>
+        <jdbcConnection driverClass="${jdbc.driverClass}" connectionURL="${jdbc.url}" userId="${jdbc.user}" password="${jdbc.password}"/>
+        <javaModelGenerator targetPackage="${targetModelPackage}.user" targetProject="MAVEN">
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="${targetXMLPackage}" targetProject="MAVEN"/>
+        <javaClientGenerator targetPackage="${targetMapperPackage}.user" targetProject="MAVEN" type="XMLMAPPER"/>
+
+        <!--用户表-->
+        <table tableName="e_user"/>
+    </context>
+</generatorConfiguration>
